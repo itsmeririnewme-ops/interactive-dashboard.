@@ -1,4 +1,6 @@
-# interactive-dashboard.
+# Interactive Productivity Dashboard
+
+This project is a web-based dashboard built for WEB-115 to demonstrate interactive JavaScript features.
 
 ## TODO: Future Enhancements
 - [ ] Add a metric conversion tool.
