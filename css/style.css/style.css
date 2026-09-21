@@ -13,3 +13,17 @@ body {
 .form-group {
     margin-bottom: 15px;
 }
+
+#metric-converter {
+  padding: 20px;
+}
+
+#metric-converter button {
+  margin-top: 15px;
+}
+
+#converter-output {
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+}

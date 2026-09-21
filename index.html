@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Interactive Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- My styles (after Bootstrap so they take priority) -->
+    <link rel="stylesheet" href="css/style.css/style.css">
 </head>
 <body>
     <h1>My Interactive Dashboard</h1>
@@ -18,38 +20,68 @@
     </script>
     <!-- The <noscript> is for web browsers with JavaScript rendering disabled. -->
     <noscript>Unfortunately, your web browser does not support JavaScript.</noscript>
+
     <div class="container">
-    <div class="row">
-        <!-- Dashboard Content -->
-        <div class="col" id="weekly-tasks">
-            <h2>Weekly Task Goal Calculator</h2>
+        <div class="row">
+            <!-- Dashboard Content -->
+            <div class="col" id="weekly-tasks">
+                <h2>Weekly Task Goal Calculator</h2>
 
-            <form id="goal-form">
-                <div class="form-group">
-                    <label for="user-name">Name:</label>
-                    <input type="text" id="user-name" class="form-control" placeholder="Enter your name">
-                </div>
+                <form id="goal-form">
+                    <div class="form-group">
+                        <label for="user-name">Name:</label>
+                        <input type="text" id="user-name" class="form-control" placeholder="Enter your name">
+                    </div>
 
-                <div class="form-group">
-                    <label for="daily-goal">Daily Task Goal:</label>
-                    <input type="number" id="daily-goal" class="form-control" placeholder="e.g. 5">
-                </div>
+                    <div class="form-group">
+                        <label for="daily-goal">Daily Task Goal:</label>
+                        <input type="number" id="daily-goal" class="form-control" placeholder="e.g. 5">
+                    </div>
 
-                <div class="form-group">
-                    <label for="bonus-tasks">Weekly Bonus Tasks:</label>
-                    <input type="number" id="bonus-tasks" class="form-control" placeholder="e.g. 2">
-                </div>
+                    <div class="form-group">
+                        <label for="bonus-tasks">Weekly Bonus Tasks:</label>
+                        <input type="number" id="bonus-tasks" class="form-control" placeholder="e.g. 2">
+                    </div>
 
-                <button type="submit" id="goal-btn" class="btn btn-primary">Calculate Weekly Goal</button>
-            </form>
+                    <button type="submit" id="goal-btn" class="btn btn-primary">Calculate Weekly Goal</button>
+                </form>
 
-            <p id="goal-message"></p>
-            
-            <script src="js/task-manager.js"></script>
+                <p id="goal-message"></p>
+
+                <script src="js/task-manager.js"></script>
+            </div>
+
+            <div class="col" id="metric-converter">
+                <h2>Imperial/Metric Converter</h2>
+
+                <form id="converter-form">
+                    <div class="form-group">
+                        <label for="value-input">Value:</label>
+                        <input type="number" id="value-input" step="any" class="form-control" placeholder="Enter a number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="conversion-select">Conversion:</label>
+                        <select id="conversion-select" class="form-control">
+                            <option value="inch to centimeter">Inches to Centimeters</option>
+                            <option value="foot to centimeter">Feet to Centimeters</option>
+                            <option value="yard to meter">Yards to Meters</option>
+                            <option value="mile to kilometer">Miles to Kilometers</option>
+                            <option value="centimeter to inch">Centimeters to Inches</option>
+                            <option value="centimeter to foot">Centimeters to Feet</option>
+                            <option value="meter to yard">Meters to Yards</option>
+                            <option value="kilometer to mile">Kilometers to Miles</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="convert-btn" class="btn btn-primary">Convert</button>
+                </form>
+
+                <p id="converter-output"></p>
+
+                <script src="js/metric-converter.js" defer></script>
+            </div>
         </div>
-
-        
     </div>
-</div>
 </body>
 </html>
