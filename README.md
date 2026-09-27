@@ -62,3 +62,8 @@ BEGIN MetricConverter
 
 END
 ```
+
+
+## Magic Eight Ball
+
+Magic Eight Ball game with a twist. A user enters a yes or no question into the input box and clicks on the ball to see what answer is randomly picked out of the array of possible answers. Clicking on the ball also initiates a shake effect using CSS animations, while a reset button will hide the answer to allow the user to ask another question. Should there be no question entered by the user, an alert box will appear telling them to enter one. Users can also enter their own answers into the array.
