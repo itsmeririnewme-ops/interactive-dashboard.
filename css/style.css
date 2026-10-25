@@ -1,0 +1,62 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+#weekly-tasks {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#metric-converter {
+  padding: 20px;
+}
+
+#metric-converter button {
+  margin-top: 15px;
+}
+
+#converter-output {
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* ---------- Task Manager ---------- */
+
+#user-tasks {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#user-tasks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+#user-tasks li span {
+    flex: 1;
+    word-break: break-word;
+}
+
+#user-tasks .task-empty {
+    justify-content: center;
+    color: #6c757d;
+    background-color: transparent;
+}
+
+#task-form .btn {
+    margin-right: 6px;
+}

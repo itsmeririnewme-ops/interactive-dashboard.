@@ -49,15 +49,35 @@
 
                 <p id="goal-message"></p>
 
-                <div id="task-list">
-                    <h3>Weekly Task List</h3>
-                    <p>Enter a task below to manage your goals.</p>
-                    <form onsubmit="return false;">
-                        <label for="task-name">Enter task:</label>
+                <h3>Weekly Task List</h3>
+                <p>Add a task, set its priority, and flag it if it's important.</p>
+
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-name">Task name:</label>
                         <input type="text" id="task-name" class="form-control" placeholder="e.g. Finish homework">
-                        <button type="button" id="add-task" class="btn btn-primary">Add Task</button>
-                    </form>
-                </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-priority">Priority:</label>
+                        <select id="task-priority" class="form-select">
+                            <option value="High">High</option>
+                            <option value="Medium" selected>Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="task-important" class="form-check-input">
+                        <label for="task-important" class="form-check-label">Mark as important</label>
+                    </div>
+
+                    <button type="submit" id="add-task" class="btn btn-primary">Add Task</button>
+                    <button type="button" id="delete-list" class="btn btn-outline-danger">Delete List</button>
+                </form>
+
+                <!-- Tasks are built here with JavaScript -->
+                <div id="task-list"></div>
 
                 <script src="js/task-manager.js"></script>
             </div>
